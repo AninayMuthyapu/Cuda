@@ -3,7 +3,7 @@
 #include <cstdlib>
 #include <cublas_v2.h>
 #include <cuda_runtime.h>
-#define CEIL_DIV(x,y) (((x)+(y)-1)/(y))
+
 
 template<const int BM.const int BN, const int BK, cosnt int TM,const int TN>
 __global__ void sgemm_5(int M,int N,int K,float *A,float *B,float *C){

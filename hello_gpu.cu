@@ -8,9 +8,8 @@ __global__  void hello_kernel(){
 int main(){
     hello_kernel<<<2,4>>>(); //2 blocks of 4 threads each 
     cudaDeviceSynchronize();
-    int dev;
+    int dev;// this creates an integer variable that stores teh curremnt GPU device ID.
     cudaGetDevice(&dev);
-    cudaDeviceProp prop;
     cudaDeviceProperties(&prop,dev);
     printf("Device: %s, SMs: %d, maxThreadsPerBlock: %d\n",
            prop.name, prop.multiProcessorCount, prop.maxThreadsPerBlock);

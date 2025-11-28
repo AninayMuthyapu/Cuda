@@ -1,0 +1,4 @@
+# Ignore CUDA object files
+*.o
+*.obj
+*.lo
